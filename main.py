@@ -9,7 +9,7 @@ token = os.getenv("token")
 
 spam_message = ""
 
-activity = discord.CustomActivity(name='bomber')
+activity = discord.CustomActivity(name='first black president')
 
 class Bot(commands.Bot):
   def __init__(self):
@@ -21,6 +21,7 @@ bot = Bot()
 
 @bot.command()
 async def dm(ctx, user: discord.User, *, message):
+  await ctx.message.delete()
   while True:
     await user.send(message)
 
