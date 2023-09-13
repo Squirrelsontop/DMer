@@ -19,6 +19,11 @@ class Bot(commands.Bot):
     super().__init__(command_prefix = ".", intents = intents, activity=activity)    
 bot = Bot()
 
+@bot.command()
+async def dm(ctx, user: discord.User, *, message):
+  while True:
+    await user.send(message)
+
 @bot.event
 async def on_ready():
   print(f'Logged in as {bot.user}')
