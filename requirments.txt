@@ -1,0 +1,4 @@
+python 3.9.6
+discord.py
+DiscordUtils
+python-dotenv
